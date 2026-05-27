@@ -4,9 +4,9 @@ import {
   type InputHTMLAttributes,
   useId,
 } from 'react'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { cn } from '@/lib/utils'
+import { cn } from 'shared/lib/utils'
+import { Input } from './input'
+import { Label } from './label'
 
 type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string

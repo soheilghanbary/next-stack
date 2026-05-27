@@ -1,6 +1,6 @@
 export const appConfig = {
-  name: 'NRPC',
-  title: 'nrpc',
+  name: 'Next Stack',
+  title: 'next-stack',
   version: '1.0',
-  description: 'Modern Full Stack: A Simplified Approach',
+  description: 'FullStack Next Starter',
 }
