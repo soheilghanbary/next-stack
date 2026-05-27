@@ -19,9 +19,7 @@
       }
     ],
     "paths": {
-      "*": ["./src/*"],
-      "@/*": ["./src/*", "./src/shared/*"],
-      "@/ui/*": ["./src/shared/components/ui/*"]
+      "*": ["./src/*"]
     }
   },
   "include": [
