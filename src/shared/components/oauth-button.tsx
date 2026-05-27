@@ -8,7 +8,7 @@ export const OAuthButton = () => {
       variant={'secondary'}
       onClick={() => signIn.social({ provider: 'google' })}
     >
-      Login with Google
+      Sign In
     </Button>
   )
 }

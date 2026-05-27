@@ -10,17 +10,17 @@ import { appConfig } from 'shared/config'
 import { cn } from 'shared/lib/utils'
 
 const GITHUB_REPO_URL = 'https://github.com/soheilghanbary/nrpc'
-const COPYRIGHT_TEXT = `© ${new Date().getFullYear()} NRPC Stack ${appConfig.version} - Soheil Ghanbary`
+const COPYRIGHT_TEXT = `© ${new Date().getFullYear()} ${appConfig.name} ${appConfig.version} - Soheil Ghanbary`
 
 export default async () => {
   return (
-    <div className="flex h-svh w-svw flex-col place-items-center items-center justify-center">
-      <div className="fade-in flex animate-duration-700 animate-fade flex-col items-center gap-y-3 p-4">
+    <div className="mx-auto grid h-svh w-full max-w-xl place-items-center">
+      <div className="fade-in flex animate-duration-700 animate-fade flex-col gap-y-3 p-4">
         <ModeToggle />
-        <h1 className="flex flex-col gap-y-1 text-center font-black text-4xl">
+        <h1 className="font-black text-4xl">
           <span>{appConfig.name}</span>
-          <span className="font-normal text-base">{appConfig.description}</span>
         </h1>
+        <p className="font-normal text-base">{appConfig.description}</p>
         <Separator />
         <div className="grid grid-cols-2 gap-x-2">
           <Link
@@ -33,7 +33,10 @@ export default async () => {
         </div>
         <p className="text-muted-foreground text-xs">{COPYRIGHT_TEXT}</p>
         <p className="text-muted-foreground text-xs">
-          Mode: {process.env.NODE_ENV}
+          Mode:{' '}
+          <span className="font-medium text-primary underline decoration-wavy underline-offset-3">
+            {process.env.NODE_ENV}
+          </span>
         </p>
         <MessageCSR />
         <Suspense fallback={<p>Loading Data...</p>}>
