@@ -1,12 +1,12 @@
 import { betterAuth } from 'better-auth'
-import { prismaAdapter } from 'better-auth/adapters/prisma'
-import { db } from '@/server/lib/db'
+import { drizzleAdapter } from 'better-auth/adapters/drizzle'
+import { db } from '@/server/db'
 
 // authentication configuration
 export const auth = betterAuth({
   baseURL: process.env.NEXT_PUBLIC_URL,
-  database: prismaAdapter(db, {
-    provider: 'postgresql',
+  database: drizzleAdapter(db, {
+    provider: 'pg',
   }),
   socialProviders: {
     github: {
