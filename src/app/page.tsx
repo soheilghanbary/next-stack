@@ -16,12 +16,10 @@ export default async () => {
   return (
     <div className="mx-auto grid h-svh w-full max-w-xl place-items-center">
       <div className="fade-in flex animate-duration-700 animate-fade flex-col gap-y-3 p-4">
-        <ModeToggle />
         <h1 className="font-black text-4xl">
           <span>{appConfig.name}</span>
         </h1>
         <p className="font-normal text-base">{appConfig.description}</p>
-        <Separator />
         <div className="grid grid-cols-2 gap-x-2">
           <Link
             href={GITHUB_REPO_URL}
@@ -32,12 +30,16 @@ export default async () => {
           <OAuthButton />
         </div>
         <p className="text-muted-foreground text-xs">{COPYRIGHT_TEXT}</p>
-        <p className="text-muted-foreground text-xs">
-          Mode:{' '}
-          <span className="font-medium text-primary underline decoration-wavy underline-offset-3">
-            {process.env.NODE_ENV}
-          </span>
-        </p>
+        <div className="flex items-center justify-between">
+          <p className="text-muted-foreground text-xs">
+            Mode:{' '}
+            <span className="font-medium text-primary underline decoration-wavy underline-offset-3">
+              {process.env.NODE_ENV}
+            </span>
+          </p>
+          <ModeToggle />
+        </div>
+        <Separator />
         <MessageCSR />
         <Suspense fallback={<p>Loading Data...</p>}>
           <MessageSSR />
