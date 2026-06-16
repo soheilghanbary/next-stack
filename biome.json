@@ -31,9 +31,9 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "suspicious": {
-        "recommended": true,
+        "preset": "recommended",
         "noExplicitAny": "off",
         "noShadowRestrictedNames": "off",
         "noArrayIndexKey": "off",
@@ -41,7 +41,7 @@
         "noAssignInExpressions": "off"
       },
       "nursery": {
-        "recommended": true,
+        "preset": "recommended",
         "useSortedClasses": {
           "fix": "safe",
           "level": "warn",
@@ -52,20 +52,20 @@
         }
       },
       "performance": {
-        "recommended": true
+        "preset": "recommended"
       },
       "style": {
-        "recommended": true,
+        "preset": "recommended",
         "noNonNullAssertion": "off",
         "useSelfClosingElements": "off"
       },
       "correctness": {
-        "recommended": true,
+        "preset": "recommended",
         "useExhaustiveDependencies": "off",
         "noNestedComponentDefinitions": "off"
       },
       "a11y": {
-        "recommended": true,
+        "preset": "recommended",
         "noSvgWithoutTitle": "off",
         "useSemanticElements": "off",
         "useKeyWithClickEvents": "off",
